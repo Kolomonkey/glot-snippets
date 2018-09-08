@@ -76,7 +76,7 @@ add_cors_headers(Req, Methods) ->
     Headers = [
         {<<"access-control-allow-methods">>, join_methods(Methods)},
         {<<"access-control-allow-origin">>, <<"*">>},
-        {<<"access-control-allow-headers">>, <<"Content-Type">>}
+        {<<"access-control-allow-headers">>, <<"Authorization, Content-Type">>}
     ],
     set_headers(Headers, Req).
 
